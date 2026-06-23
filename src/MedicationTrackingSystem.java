@@ -49,4 +49,35 @@ public class MedicationTrackingSystem {
         prescriptions.add(prescription);
     }
 
+    /*
+    * Removes a patient from the system.
+     */
+
+    public void removePatient (Patient patient) {
+        patients.remove(patient);
+    }
+
+    /*
+    * Removes a doctor from the system.
+     */
+
+    public void removeDoctor (Doctor doctor) {
+        doctors.remove(doctor);
+    }
+
+    /*
+    * Removes a medication from the system.
+     */
+
+    public void removeMedication (Medication medication) {
+        medications.remove(medication);
+    }
+
+    /*
+    * Removes a prescription from the system.
+     */
+
+    public void removePrescription (Prescription prescription) {
+        prescriptions.remove(prescription);
+    }
 }
