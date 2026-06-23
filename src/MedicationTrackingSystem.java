@@ -80,4 +80,28 @@ public class MedicationTrackingSystem {
     public void removePrescription (Prescription prescription) {
         prescriptions.remove(prescription);
     }
+
+    /*
+    * Edit a patient's information. 
+    */
+
+    public void editPatient (Patient patient, String name, int age, String phonenumber) {
+        patient.setname(name);
+        patient.setAge(age);
+        patient.setPhoneNumber(phonenumber);
+    }
+
+     /*
+    * Edit a doctor's information. 
+    */
+
+    public void editDoctor (Doctor doctor, String name, int age, String phonenumber, String specialization) {
+        doctor.setname(name);
+        doctor.setAge(age);
+        doctor.setPhoneNumber(phonenumber);
+        doctor.setSpecialization(specialization);
+    }
+
+
+
 }
