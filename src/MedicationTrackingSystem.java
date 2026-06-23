@@ -44,10 +44,6 @@ public class MedicationTrackingSystem {
         medications.add(medication);
     }
 
-    /*  adds a prescriptions to the prescriptions array list */
-    public void addPrescription (Prescription prescription) {
-        prescriptions.add(prescription);
-    }
 
     /*
     * Removes a patient from the system.
@@ -73,13 +69,6 @@ public class MedicationTrackingSystem {
         medications.remove(medication);
     }
 
-    /*
-    * Removes a prescription from the system.
-     */
-
-    public void removePrescription (Prescription prescription) {
-        prescriptions.remove(prescription);
-    }
 
     /*
     * Edit a patient's information. 
@@ -112,6 +101,50 @@ public class MedicationTrackingSystem {
         medication.setQuantityInStock(quantityInStock);
     }
 
+    /*
+    * Search patient by name.
+     */
+
+    public Patient searchPatient (String name) {
+
+        for (int i = 0; i < patients.size(); i++) {
+            if (patients.get(i).getName().equalsIgnoreCase(name)) {
+                return patients.get(i);
+            }
+        }
+
+        return null;
+    }
+
+    /*
+    * Search doctor by name.
+     */
+
+    public Doctor searchDoctor (String name) {
+
+        for (int i = 0; i < doctors.size(); i++) {
+            if (doctors.get(i).getName().equalsIgnoreCase(name)) {
+                return doctors.get(i);
+            }
+        }
+
+        return null;
+    }
+
+    /*
+    * Search medication by name.
+     */
+
+    public Medication searchMedication (String name) {
+
+        for (int i = 0; i < medications.size(); i++) {
+            if (medications.get(i).getName().equalsIgnoreCase(name)) {
+                return medications.get(i);
+            }
+        }
+
+        return null;
+    }
 
 
 }
