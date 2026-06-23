@@ -146,5 +146,17 @@ public class MedicationTrackingSystem {
         return null;
     }
 
+    /*
+    * Restocks a medication by adding more quantity to current stock.
+     */
+
+    public void restockMedication (Medication medication, int amount) {
+        int currentStock = medication.getQuantityInStock();
+
+        medication.setQuantityInStock(currentStock + amount);
+    }
+
+    /*
+    * Check a medications expiry date by the current date */
 
 }
