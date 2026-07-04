@@ -12,12 +12,15 @@ public class Doctor /* extends Person*/ {
     private String name;
     private String phoneNumber;
     private int age;
+    private int id;
+    private static int idCounter = 1; /* Static counter to generate unique IDs */
     private ArrayList<Patient> patients;
     
 
     public Doctor(String name, int age, String phoneNumber, String specialization) { /* Constructor to initialize a Doctor object with name, age, phone number, and specialty */
 
         this.phoneNumber = phoneNumber;
+        this.id = idCounter++; /* Assign the unique ID to the Doctor object */
         this.age = age;
         this.name = name;
         this.specialization = specialization;
@@ -29,6 +32,10 @@ public class Doctor /* extends Person*/ {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {
