@@ -17,6 +17,9 @@ public class Prescription {
     private String doctorname;
     private int medicationId;
     private String medicationName;
+    private Doctor doctor;
+    private Medication medication;
+    private Patient patient;
     
 
     public Prescription(Patient patient, Doctor doctor, Medication medication) { /* Constructor to initialize a Prescription object with patient, doctor, and medication information */
@@ -25,13 +28,25 @@ public class Prescription {
         this.patientId = patient.getId();
         this.patientname = patient.getName();
         this.doctorId = doctor.getId();
-        this.doctorname = doctor.getName();
+        this.doctor = doctor;
         this.medicationId = medication.getId();
         this.medicationName = medication.getName();
         this.expires = LocalDate.now().plusYears(1); // Set expiration date to 1 year from now
     }
 
     /* Getters and setters for the Prescription class */
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public Medication getMedication() {
+        return medication;
+    }
+
+    public Patient getPatient() {
+        return patient;
+    }
 
     public int getId() {
         return id;

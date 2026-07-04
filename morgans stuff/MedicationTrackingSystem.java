@@ -166,6 +166,29 @@ public class MedicationTrackingSystem {
         doctor.setSpecialization(specialization);
     }
 
+    public void editMedication (Medication medToEdit, String newMedName, String newDose, int newStock){
+
+        Medication medication = findMedication(medToEdit.getName());
+        
+        if (medication != null) {
+
+            medication.setName(newMedName);
+            medication.setDosage(newDose);
+            medication.setQuantity(newStock);
+        }
+       
+    }
+
+    public void restockMedication(Medication medToRestock, int restockAmount) {
+
+        Medication medication = findMedication(medToRestock.getName());
+
+        if (medication != null) {
+            int quantity = medication.getQuantity();
+            medication.setQuantity(quantity += restockAmount);
+        }
+    }
+
 
 
 }
