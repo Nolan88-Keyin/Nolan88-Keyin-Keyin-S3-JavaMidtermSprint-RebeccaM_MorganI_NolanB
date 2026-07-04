@@ -6,6 +6,9 @@
 public class TestPerson {
     
     public static void main(String[] args) {
+
+
+        MedicationTrackingSystem system = new MedicationTrackingSystem(); /* Create an instance of the MedicationTrackingSystem class to manage patients, doctors, medications, and prescriptions and to have control overall as one system instead of a bunch of branches */
         
 
         Patient patient1 = new Patient("Jane Smith", 25, "098-765-4321");
@@ -23,15 +26,15 @@ public class TestPerson {
 
 
         /* Create medications for the patient */
-        Medication medication1 = new Medication("Aspirin", "500mg", "30 tablets");
-        Medication medication2 = new Medication("Ibuprofen", "200mg", "20 tablets");
-        Medication medication3 = new Medication("Paracetamol", "500mg", "15 tablets");
-        Medication medication4 = new Medication("Amoxicillin", "250mg", "10 capsules");
-        Medication medication5 = new Medication("Metformin", "1000mg", "60 tablets");
-        Medication medication6 = new Medication("Lisinopril", "10mg", "30 tablets");
-        Medication medication7 = new Medication("Tylenol", "500mg", "20 tablets");
-        Medication medication8 = new Medication("Simvastatin", "20mg", "30 tablets");
-        Medication medication9 = new Medication("Omeprazole", "20mg", "14 capsules");
+        Medication medication1 = new Medication("Aspirin", "500mg", 30);
+        Medication medication2 = new Medication("Ibuprofen", "200mg", 20);
+        Medication medication3 = new Medication("Paracetamol", "500mg", 15);
+        Medication medication4 = new Medication("Amoxicillin", "250mg", 10);
+        Medication medication5 = new Medication("Metformin", "1000mg", 60);
+        Medication medication6 = new Medication("Lisinopril", "10mg", 30);
+        Medication medication7 = new Medication("Tylenol", "500mg", 20);
+        Medication medication8 = new Medication("Simvastatin", "20mg", 30);
+        Medication medication9 = new Medication("Omeprazole", "20mg", 14);
 
         /* Create prescriptions for the patient */
         Prescription prescription1 = new Prescription(patient1, doctor1, medication1);
@@ -43,6 +46,43 @@ public class TestPerson {
         Prescription prescription7 = new Prescription(patient4, doctor4, medication7);
         Prescription prescription8 = new Prescription(patient4, doctor4, medication8);
         Prescription prescription9 = new Prescription(patient4, doctor4, medication9);
+
+
+        /*adding all data to the system so its all contained in one place */
+
+        /* Add patients to the system */
+        system.addPatient(patient1);
+        system.addPatient(patient2);
+        system.addPatient(patient3);
+        system.addPatient(patient4);
+
+        /* Add doctors to the system */
+        system.addDoctor(doctor1);
+        system.addDoctor(doctor2);
+        system.addDoctor(doctor3);
+        system.addDoctor(doctor4);
+
+        /* Add medications to the system */
+        system.addMedication(medication1);
+        system.addMedication(medication2);
+        system.addMedication(medication3);
+        system.addMedication(medication4);
+        system.addMedication(medication5);
+        system.addMedication(medication6);
+        system.addMedication(medication7);
+        system.addMedication(medication8);
+        system.addMedication(medication9);
+
+        /* Add prescriptions to the system */
+        system.addPrescription(prescription1);
+        system.addPrescription(prescription2);
+        system.addPrescription(prescription3);
+        system.addPrescription(prescription4);
+        system.addPrescription(prescription5);
+        system.addPrescription(prescription6);
+        system.addPrescription(prescription7);
+        system.addPrescription(prescription8);
+        system.addPrescription(prescription9);
     
 
         /* Add medications to the patient */
@@ -73,8 +113,8 @@ public class TestPerson {
         doctor3.addPatient(patient3);
         doctor4.addPatient(patient4);
 
-        /* Create an ArrayList to hold the doctors */
-        Doctor[] doctors = {doctor1, doctor2, doctor3, doctor4};
+        
+
         
 
 
@@ -82,7 +122,7 @@ public class TestPerson {
 
         /* Print out the information for each doctor, their patients, medications, and prescriptions using a for loop */
 
-        for (Doctor doctor : doctors) {
+        for (Doctor doctor : system.getDoctors()) { /* Loop through the list of doctors in the system */
             System.out.println(doctor);
 
             System.out.println();/*blank line */
@@ -108,6 +148,18 @@ public class TestPerson {
             System.out.println();/*blank line */
         }}
 
+        System.out.println("All Doctors in the System:");
+        for (Doctor doctor : system.getDoctors()) {
+            System.out.println(doctor);
+        }
+
+        System.out.println("All Patients in the System:");
+        for (Patient patient : system.getPatients()) { /* Print out all patients in the system */
+            System.out.println(patient);
+        }
+
+        System.out.println(system.getMedications());
+        System.out.println(system.getPrescriptions());
         
     }
 }

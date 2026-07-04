@@ -25,7 +25,7 @@ public class Doctor /* extends Person*/ {
         this.name = name;
         this.specialization = specialization;
         this.patients = new ArrayList<>(); /* Initialize the list of patients */
-        /*unlike the Person class, the doctor class doesn't need to generate a unique ID on its own since it inherits from the Person class */
+        
     }
 
     /* Getters and setters for the Doctor class */
@@ -82,10 +82,10 @@ public class Doctor /* extends Person*/ {
 
     @Override
     public String toString() {
-        return "Doctor - " + name + '\n' + 
-            "specialization - " + specialization + '\n' +
-            "age - " + age + '\n' +
-            "phone number - " + phoneNumber + '\n' +
+        return "Doctor - " + "Id - " + id + ", Name - " + name + '\n' + 
+            "Specialization - " + specialization + '\n' +
+            "Age - " + age + '\n' +
+            "Phone Number - " + phoneNumber + '\n' +
             System.lineSeparator();
     }
     

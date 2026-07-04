@@ -19,6 +19,7 @@ public class MedicationTrackingSystem {
     // List of all prescriptions issued in the system
     private ArrayList<Prescription> prescriptions;
 
+
     /*  CONSTRUCTOR */
     /*  creates empty list when the system starts */
 
@@ -28,6 +29,69 @@ public class MedicationTrackingSystem {
         medications = new ArrayList<>();
         prescriptions = new ArrayList<>();
     } 
+
+    /*gets the patient list */
+    public ArrayList<Patient> getPatients() {
+        return patients;
+    }
+
+    /*gets the doctor list */
+    public ArrayList<Doctor> getDoctors() {
+        return doctors;
+    }
+
+    /*gets the medication list */
+    public ArrayList<Medication> getMedications() {
+        return medications;
+    }
+
+    /*gets the prescription list */
+    public ArrayList<Prescription> getPrescriptions() {
+        return prescriptions;
+    }
+
+    /*finds a specific patient by name */
+    public Patient findPatient(String name){
+        for (Patient patient : patients) {
+            if (patient.getName().equalsIgnoreCase(name)) {
+                return patient;
+            }
+        }
+        return null;
+    }
+
+    /*finds a specific doctor by name */
+    public Doctor findDoctor(String name){
+        for (Doctor doctor : doctors){
+            if (doctor.getName().equalsIgnoreCase(name)){
+                return doctor;
+            }
+        }
+        return null;
+    }
+
+    /*finds a specific medication by name */
+    public Medication findMedication(String name){
+        for (Medication medication : medications){
+            if (medication.getName().equalsIgnoreCase(name)){
+                return medication;
+            }
+        }
+        return null;
+    }
+
+    /* finds all prescriptions for a given patient name */
+    public ArrayList<Prescription> findPrescriptions(String name) {
+
+        /*Tempary list to store found prescriptions for printing after a search */
+        ArrayList<Prescription> foundPrescriptions = new ArrayList<>();
+        for (Prescription prescription : prescriptions) {
+            if (prescription.getPatientname().equalsIgnoreCase(name)) {
+                foundPrescriptions.add(prescription);
+            }
+        }
+        return foundPrescriptions;
+    }
 
     /* adds a patient to the patients list */
     public void addPatient (Patient patient) {

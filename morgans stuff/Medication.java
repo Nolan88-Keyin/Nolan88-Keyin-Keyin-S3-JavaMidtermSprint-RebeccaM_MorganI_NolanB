@@ -15,13 +15,13 @@ import java.util.Random;
 public class Medication {
     private String name;
     private String dosage;
-    private String quantity;
+    private int quantity;
     private int id;
     private static int idCounter = 1; /* Static counter to generate unique IDs */
     private LocalDate expirationDate;
     public static ArrayList<Medication> medications = new ArrayList<>(); /* Static list to store all medications */
 
-    public Medication(String name, String dosage, String quantity) { /* Constructor to initialize a Medication object with name, dosage, and quantity */
+    public Medication(String name, String dosage, int quantity) { /* Constructor to initialize a Medication object with name, dosage, and quantity */
 
         this.name = name;
         this.dosage = dosage;
@@ -48,11 +48,11 @@ public class Medication {
         this.dosage = dosage;
     }
 
-    public String getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(String quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
