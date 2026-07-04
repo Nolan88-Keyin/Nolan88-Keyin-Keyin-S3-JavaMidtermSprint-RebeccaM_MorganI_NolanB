@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 /* MEDICATION TRACKING SYSTEM 
@@ -184,8 +185,11 @@ public class MedicationTrackingSystem {
         Medication medication = findMedication(medToRestock.getName());
 
         if (medication != null) {
+            LocalDate newExpireDate;
             int quantity = medication.getQuantity();
             medication.setQuantity(quantity += restockAmount);
+            newExpireDate = LocalDate.now().plusYears(1);
+            medication.setExpirationDate(newExpireDate);
         }
     }
 
