@@ -86,7 +86,7 @@ public class MedicationTrackingSystem {
     */
 
     public void editPatient (Patient patient, String name, int age, String phonenumber) {
-        patient.setname(name);
+        patient.setName(name);
         patient.setAge(age);
         patient.setPhoneNumber(phonenumber);
     }
@@ -96,7 +96,7 @@ public class MedicationTrackingSystem {
     */
 
     public void editDoctor (Doctor doctor, String name, int age, String phonenumber, String specialization) {
-        doctor.setname(name);
+        doctor.setName(name);
         doctor.setAge(age);
         doctor.setPhoneNumber(phonenumber);
         doctor.setSpecialization(specialization);
