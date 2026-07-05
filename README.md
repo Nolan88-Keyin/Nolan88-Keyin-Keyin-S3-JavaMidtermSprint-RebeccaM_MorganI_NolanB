@@ -4,7 +4,7 @@ This repository contains a Java console application for managing pharmacy operat
 
 ## Documentation Guide
 - User documentation: [USER_DOCUMENTATION.md](USER_DOCUMENTATION.md)
-	- Use this for running the app, using the menu, and understanding feature behavior from an end-user perspective.
+	- Use this for running the app, using the menu, and understanding feature behavior from an user perspective.
 - Development documentation: [DEVELOPMENT_DOCUMENTATION.md](DEVELOPMENT_DOCUMENTATION.md)
 	- Use this for architecture, class responsibilities, build process, dependencies, standards, Javadocs, and theoretical database design.
 
@@ -41,4 +41,4 @@ Created the classes in the model folder and designed the class diagram.
 Developed the MedicationTrackingSystem.
 
 ### Nolan
-Created ui (PharmacyManagementApp and PharmacyMenu), developed the PrescriptionService and PrescriptionReports files, and designed the ER diagram.
+Created ui (PharmacyManagementApp and PharmacyMenu), developed the PrescriptionService and PrescriptionReports files, user and dev documentation and designed the ER diagram.
