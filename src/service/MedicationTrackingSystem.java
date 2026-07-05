@@ -1,11 +1,6 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import model.Doctor;
-import model.Medication;
-import model.Patient;
-import model.Prescription;
-
 /**
  * Manages pharmacy entities and core CRUD operations.
  */
