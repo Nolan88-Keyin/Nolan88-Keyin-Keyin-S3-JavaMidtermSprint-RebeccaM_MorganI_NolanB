@@ -3,7 +3,7 @@
 ## 1. Application Overview
 - Project name: Pharmacy Management System
 - Team members: NolanB, MorganI, RebeccaM
-- Purpose of the application: This application manages core pharmacy operations using object-oriented design, including patient, doctor, medication, and prescription records. It supports adding, editing, deleting, and searching records, accepting prescriptions, assigning patients to doctors, checking expired medications, restocking inventory, and generating reports for pharmacy staff.
+- Purpose of the application: This application manages core pharmacy operations using object-oriented design, including patient, doctor, medication, and prescription records. It supports adding, editing, deleting, and searching records, processing prescriptions, assigning patients to doctors, checking expired medications, restocking inventory, and generating reports for pharmacy staff.
 
 ## 2. Features at a Glance
 - Add patient, doctor, medication
@@ -121,11 +121,11 @@ java -cp bin PharmacyManagementApp
   - Patient name
   - Medication name
 - Validation behavior (missing doctor/patient/medication, expired, out of stock):
-  - If doctor, patient, or medication cannot be found: Doctor, patient, or medication was not found.
+  - If doctor, patient, or medication cannot be found: Doctor, patient, or medication not found.
   - If medication is expired: prescription is rejected.
   - If medication quantity is 0: prescription is rejected.
 - Expected output:
-  - On success, prescription is accepted, linked to patient and system records, medication stock is decreased by 1, and a confirmation message is printed.
+  - On success, the prescription is accepted, linked to the patient and system records, medication stock decreases by 1, and a confirmation message is printed.
 
 ### 4.6 Reports
 - Full system report:
@@ -137,7 +137,7 @@ java -cp bin PharmacyManagementApp
   - Prompts for doctor name and prints prescriptions issued by that doctor.
   - If doctor is not found or no matching prescriptions exist, a clear message is shown.
 - Patient past-year prescription summary:
-  - Prints a summarized list of medication names prescribed within the past year, with counts.
+  - Prints a summary of medication names prescribed within the past year, with counts.
 
 ### 4.7 Restock Medication
 - Input required:
@@ -150,7 +150,7 @@ java -cp bin PharmacyManagementApp
   - Output: All medications restocked.
 
 ## 5. Class Diagram
-The following diagram shows the core classes and how they are related:
+The following diagram shows the core classes and their relationships:
 
 [Pharmacy class diagram](docs/class-diagram.svg)
 
@@ -165,7 +165,7 @@ If the diagram preview does not render in your Markdown viewer, open `docs/class
 4. Select Add, then add a medication with a quantity greater than 0.
 5. Select Add Patient to Doctor and enter the doctor and patient names.
 6. Select Accept Prescription and enter doctor, patient, and medication names.
-7. Confirm the success message that the prescription was accepted.
+7. Confirm that the prescription accepted message is shown.
 8. Select Prescriptions by Doctor and enter the same doctor name.
 9. Review the printed prescription details to verify the link was created.
 10. Select Full System Report to view all stored records together.
