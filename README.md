@@ -31,3 +31,14 @@ This repository contains a Java console application for managing pharmacy operat
 - NolanB
 - MorganI
 - RebeccaM
+
+## Team Contributions
+
+### Morgan
+Created the classes in the model folder and designed the class diagram.
+
+### Rebecca
+Developed the MedicationTrackingSystem.
+
+### Nolan
+Created ui (PharmacyManagementApp and PharmacyMenu), developed the PrescriptionService and PrescriptionReports files, and designed the ER diagram.
