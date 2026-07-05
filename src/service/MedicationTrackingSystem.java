@@ -1,6 +1,11 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+import model.Doctor;
+import model.Medication;
+import model.Patient;
+import model.Prescription;
+
 /**
  * Manages pharmacy entities and core CRUD operations.
  */
@@ -272,12 +277,14 @@ public class MedicationTrackingSystem {
      *
      * @param medication medication to check
      * @return true if the medication is expired, false otherwise
-     */
-    public boolean isMedicationExpired(Medication medication) {
+     
+      public boolean isMedicationExpired(Medication medication) {
         LocalDate currentDate = LocalDate.now();
         LocalDate expiryDate = medication.getExpirationDate();
 
-        return expiryDate.isBefore(currentDate); /* return true if the medication is expired, false otherwise */
+        return expiryDate.isBefore(currentDate); /* return true if the medication is expired, false otherwise 
     }
+    */
+     
 
 }
