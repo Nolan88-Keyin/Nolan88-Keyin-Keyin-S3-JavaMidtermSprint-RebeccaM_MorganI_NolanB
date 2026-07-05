@@ -267,6 +267,17 @@ public class MedicationTrackingSystem {
         }
     }
 
+    /**
+     * Check if a medication is expired.
+     *
+     * @param medication medication to check
+     * @return true if the medication is expired, false otherwise
+     */
+    public boolean isMedicationExpired(Medication medication) {
+        LocalDate currentDate = LocalDate.now();
+        LocalDate expiryDate = medication.getExpirationDate();
 
+        return expiryDate.isBefore(currentDate); /* return true if the medication is expired, false otherwise */
+    }
 
 }
