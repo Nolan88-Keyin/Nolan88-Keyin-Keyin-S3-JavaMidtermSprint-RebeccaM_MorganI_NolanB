@@ -150,7 +150,7 @@ java -cp bin PharmacyManagementApp
   - Consistent Java brace style with readable spacing and line breaks.
   - Methods grouped by responsibility (getters/setters, CRUD, reporting, utility helpers).
 - Comment/Javadoc standards:
-  - Public classes and methods include Javadocs describing purpose, parameters, and return values.
+  - Major classes include summary comments, and public methods are documented where it adds value to the workflow or API surface.
   - Inline comments are used only for non-obvious logic blocks.
 - Error handling conventions:
   - Menu-level validation for numeric input with retry loops.
@@ -160,7 +160,7 @@ java -cp bin PharmacyManagementApp
 ## 9. Javadocs
 - How Javadocs are written in this project:
   - Each major class includes a summary comment.
-  - Public methods include parameter and return documentation where applicable.
+  - Public methods include parameter and return documentation where applicable, especially for workflow and service methods.
   - Service methods include behavior-focused descriptions for workflow logic.
 - How to generate Javadocs:
   - Run from project root:
