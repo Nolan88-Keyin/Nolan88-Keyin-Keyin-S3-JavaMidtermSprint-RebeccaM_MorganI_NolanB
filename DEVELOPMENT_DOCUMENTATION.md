@@ -5,7 +5,7 @@
 - Team members: NolanB, MorganI, RebeccaM
 - Course/term: KEYIN Semester 3 - Java Midterm
 - Repository URL: https://github.com/Nolan88-Keyin/Nolan88-Keyin-Keyin-S3-JavaMidtermSprint-RebeccaM_MorganI_NolanB.git
-- Last updated: 2026-07-04
+- Last updated: 2026-07-05
 
 ## 2. Development Goals
 - Core objective: Build a menu-driven, object-oriented Pharmacy Management System that manages patients, doctors, medications, and prescriptions with clear class responsibilities and maintainable code organization.
