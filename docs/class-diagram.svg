@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="980" viewBox="0 0 1500 980">
+  <defs>
+    <style>
+      .title { font: bold 24px Arial, sans-serif; fill: #f9fafb; }
+      .box { fill: #1f2937; stroke: #d1d5db; stroke-width: 2; }
+      .className { font: bold 20px Arial, sans-serif; fill: #f9fafb; }
+      .attr { font: 15px Arial, sans-serif; fill: #f9fafb; }
+      .line { stroke: #d1d5db; stroke-width: 2; fill: none; }
+      .label { font: bold 13px Arial, sans-serif; fill: #f9fafb; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#d1d5db" />
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1500" height="980" fill="#111827"/>
+
+  <text x="20" y="40" class="title">Pharmacy Management System - Class Diagram</text>
+
+  <!-- Person -->
+  <rect x="590" y="70" width="220" height="130" class="box"/>
+  <text x="652" y="100" class="className">Person</text>
+  <line x1="590" y1="110" x2="810" y2="110" class="line"/>
+  <text x="602" y="132" class="attr">- id: int</text>
+  <text x="602" y="152" class="attr">- name: String</text>
+  <text x="602" y="172" class="attr">- age: int</text>
+  <text x="602" y="192" class="attr">- phoneNumber: String</text>
+
+  <!-- Patient -->
+  <rect x="260" y="260" width="280" height="150" class="box"/>
+  <text x="350" y="290" class="className">Patient</text>
+  <line x1="260" y1="300" x2="540" y2="300" class="line"/>
+  <text x="272" y="323" class="attr">- medications: ArrayList&lt;Medication&gt;</text>
+  <text x="272" y="345" class="attr">- prescriptions: ArrayList&lt;Prescription&gt;</text>
+
+  <!-- Doctor -->
+  <rect x="860" y="260" width="280" height="150" class="box"/>
+  <text x="952" y="290" class="className">Doctor</text>
+  <line x1="860" y1="300" x2="1140" y2="300" class="line"/>
+  <text x="872" y="323" class="attr">- specialization: String</text>
+  <text x="872" y="345" class="attr">- patients: ArrayList&lt;Patient&gt;</text>
+
+  <!-- Medication -->
+  <rect x="80" y="540" width="320" height="190" class="box"/>
+  <text x="170" y="570" class="className">Medication</text>
+  <line x1="80" y1="580" x2="400" y2="580" class="line"/>
+  <text x="92" y="602" class="attr">- id: int</text>
+  <text x="92" y="622" class="attr">- name: String</text>
+  <text x="92" y="642" class="attr">- dosage: String</text>
+  <text x="92" y="662" class="attr">- quantity: int</text>
+  <text x="92" y="682" class="attr">- expirationDate: LocalDate</text>
+
+  <!-- Prescription -->
+  <rect x="500" y="520" width="360" height="210" class="box"/>
+  <text x="610" y="550" class="className">Prescription</text>
+  <line x1="500" y1="560" x2="860" y2="560" class="line"/>
+  <text x="512" y="582" class="attr">- id: int</text>
+  <text x="512" y="602" class="attr">- doctor: Doctor</text>
+  <text x="512" y="622" class="attr">- patient: Patient</text>
+  <text x="512" y="642" class="attr">- medication: Medication</text>
+  <text x="512" y="662" class="attr">- expires: LocalDate</text>
+
+  <!-- MedicationTrackingSystem -->
+  <rect x="940" y="520" width="380" height="230" class="box"/>
+  <text x="990" y="550" class="className">MedicationTrackingSystem</text>
+  <line x1="940" y1="560" x2="1320" y2="560" class="line"/>
+  <text x="952" y="582" class="attr">- patients: ArrayList&lt;Patient&gt;</text>
+  <text x="952" y="602" class="attr">- doctors: ArrayList&lt;Doctor&gt;</text>
+  <text x="952" y="622" class="attr">- medications: ArrayList&lt;Medication&gt;</text>
+  <text x="952" y="642" class="attr">- prescriptions: ArrayList&lt;Prescription&gt;</text>
+
+  <!-- Inheritance lines -->
+  <line x1="540" y1="270" x2="590" y2="200" class="line" marker-end="url(#arrow)"/>
+  <text x="500" y="232" class="label">inherits</text>
+  <line x1="960" y1="270" x2="810" y2="200" class="line" marker-end="url(#arrow)"/>
+  <text x="930" y="232" class="label">inherits</text>
+
+  <!-- Associations -->
+  <line x1="540" y1="360" x2="500" y2="560" class="line" marker-end="url(#arrow)"/>
+  <text x="470" y="455" class="label">has</text>
+
+  <line x1="860" y1="360" x2="860" y2="610" class="line" marker-end="url(#arrow)"/>
+  <text x="872" y="495" class="label">issues</text>
+
+  <line x1="400" y1="620" x2="500" y2="620" class="line" marker-end="url(#arrow)"/>
+  <text x="420" y="607" class="label">references</text>
+
+  <line x1="1140" y1="360" x2="540" y2="360" class="line" marker-end="url(#arrow)"/>
+  <text x="812" y="348" class="label">manages</text>
+
+  <line x1="940" y1="590" x2="860" y2="590" class="line" marker-end="url(#arrow)"/>
+  <line x1="940" y1="615" x2="860" y2="615" class="line" marker-end="url(#arrow)"/>
+  <line x1="940" y1="640" x2="860" y2="640" class="line" marker-end="url(#arrow)"/>
+  <line x1="940" y1="665" x2="860" y2="665" class="line" marker-end="url(#arrow)"/>
+
+  <text x="1020" y="790" class="label">System stores collections of:</text>
+  <text x="1020" y="814" class="label">- doctors</text>
+  <text x="1020" y="836" class="label">- patients</text>
+  <text x="1020" y="858" class="label">- medications</text>
+  <text x="1020" y="880" class="label">- prescriptions</text>
+</svg>
